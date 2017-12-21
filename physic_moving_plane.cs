@@ -58,7 +58,11 @@ public class physic_moving_plane : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D coll) {
 		
-		if (coll.gameObject.tag == "Tyre")
+		if (coll.gameObject.transform.position.y > transform.position.y)
 			target = coll.transform.root;
+	}
+	void OnCollisionExit2D(Collision2D coll) {
+
+		target = null;
 	}
 }
