@@ -16,7 +16,7 @@ public class physic_moving_plane : MonoBehaviour {
 	public bool y = false;
 
 	void Start () {
-
+		//Hello
 		originalPosition = transform.position;
 
 		if (!x && !y) GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
